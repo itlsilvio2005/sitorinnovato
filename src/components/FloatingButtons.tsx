@@ -1,20 +1,9 @@
-import { MessageCircle, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Chatbot from './Chatbot';
 
 export default function FloatingButtons() {
   return (
     <>
-      {/* WhatsApp floating button */}
-      <a
-        href="https://wa.me/393387277095"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-40 right-4 z-40 md:bottom-6 md:right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-105"
-        aria-label="Contattaci su WhatsApp"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </a>
-
       {/* Chatbot */}
       <Chatbot />
 

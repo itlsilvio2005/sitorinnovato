@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Church, Clock, ChevronDown, ChevronUp, MessageCircle, Share2 } from 'lucide-react';
+import { MapPin, Church, Clock, ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import { Necrologio } from '../lib/necrologi';
 import { getInitials, getRelativeTime, formatDateIT, formatDateTimeCerimonia } from '../lib/utils';
@@ -104,15 +104,6 @@ export default function NecrologioCard({ necrologio }: Props) {
             <MessageCircle className="w-3.5 h-3.5" />
             Lascia un pensiero
           </button>
-          <a
-            href={`https://wa.me/?text=${encodeURIComponent(`Ricordo di ${necrologio.nome}`)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center w-8 h-8 text-text-muted hover:text-green-600 transition-colors rounded-md hover:bg-white"
-            aria-label="Condividi su WhatsApp"
-          >
-            <Share2 className="w-4 h-4" />
-          </a>
         </div>
 
         {/* Footer */}
