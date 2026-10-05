@@ -115,3 +115,19 @@ Il data layer è astratto in `src/lib/necrologi.ts`. Per collegare un database r
 - **Cellulare/WhatsApp:** 338 7277095
 - **Email:** pecorarisrl@yahoo.it
 - **P.IVA:** 02755090368
+
+## 🖼️ Crediti immagini
+
+### Immagini dal sito originale Pecorari
+Le seguenti immagini sono state riutilizzate dal sito originale onoranzefunebripecorari.com:
+- Addobbi floreali: GettyImages-1293873354, GettyImages-1010977266, GettyImages-1305208242, flower-3287768_1920
+- Lapidi e ornamenti: angel-2902845_1920, img.LTE0MjcwODcxNDg, img.LTIxNjk1MzAzMQ, GettyImages-1064891178
+- Cofani e urne cinerarie: cofani+funebri1, cofani+funebri2, cofani+funebri, Urne1
+
+### Immagini generate AI
+Le seguenti immagini sono state generate appositamente per questo sito demo:
+- Messaggi di cordoglio: lettera di condoglianze con fiori bianchi
+- Operazioni cimiteriali: cimitero con lapidi in marmo
+- Trasporti funebri: carro funebre elegante con fiori bianchi
+
+**Nota:** Per un sito in produzione, sostituire tutte le immagini con foto originali o acquistare licenze appropriate.
