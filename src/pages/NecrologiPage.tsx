@@ -48,19 +48,19 @@ export default function NecrologiPage() {
 
   if (loading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <p className="text-text-muted">Caricamento...</p>
+      <div className="max-w-container mx-auto px-4 py-16 text-center">
+        <p className="text-text-secondary">Caricamento...</p>
       </div>
     );
   }
 
   return (
-    <main className="py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <main className="py-12 md:py-16 bg-tortora-50 min-h-screen">
+      <div className="max-w-container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-3 font-normal">Necrologi</h1>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <h1 className="font-serif text-3xl md:text-4xl text-text-primary mb-3">Necrologi</h1>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg">
             Registro online degli annunci funebri. Cercate il ricordo di una persona cara o consultate gli ultimi annunci pubblicati.
           </p>
         </div>
@@ -86,10 +86,10 @@ export default function NecrologiPage() {
           {filtered.length} {filtered.length === 1 ? 'annuncio trovato' : 'annunci trovati'}
         </p>
 
-        {/* Grid */}
+        {/* Grid - 2 colonne */}
         {filtered.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {visible.map((n) => (
                 <NecrologioCard key={n.id} necrologio={n} />
               ))}
@@ -99,7 +99,7 @@ export default function NecrologiPage() {
               <div className="text-center mt-8">
                 <button
                   onClick={() => setVisibleCount((prev) => prev + 6)}
-                  className="inline-flex items-center gap-2 bg-surface border border-border text-primary px-6 py-3 rounded-md hover:bg-border-light transition-colors font-medium text-sm"
+                  className="inline-flex items-center gap-2 bg-white border border-tortora-200 text-tortora-800 px-6 py-3 rounded-md hover:bg-tortora-50 transition-colors font-semibold"
                 >
                   Carica altri annunci
                 </button>
@@ -108,13 +108,13 @@ export default function NecrologiPage() {
           </>
         ) : (
           <div className="text-center py-16">
-            <div className="w-16 h-16 bg-surface rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-text-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-16 h-16 bg-tortora-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h2 className="font-serif text-xl text-primary mb-2">Nessun annuncio trovato</h2>
-            <p className="text-text-muted text-sm">Prova a modificare i filtri di ricerca</p>
+            <h2 className="font-serif text-xl text-text-primary mb-2">Nessun annuncio trovato</h2>
+            <p className="text-text-secondary text-[15px]">Prova a modificare i filtri di ricerca</p>
           </div>
         )}
       </div>

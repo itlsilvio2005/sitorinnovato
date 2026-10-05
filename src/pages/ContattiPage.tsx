@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, MapPin, Mail, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock } from 'lucide-react';
 
 export default function ContattiPage() {
   const [inviato, setInviato] = useState(false);
@@ -7,91 +7,91 @@ export default function ContattiPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form contatti:', formData);
+    console.log('Form contatti (demo):', formData);
     setInviato(true);
     setFormData({ nome: '', cognome: '', email: '', telefono: '', messaggio: '', privacy: false });
   };
 
   return (
-    <main className="py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <main className="py-12 md:py-16 bg-tortora-50 min-h-screen">
+      <div className="max-w-container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-4 font-normal">Contatti</h1>
-          <p className="text-[#666] max-w-2xl mx-auto">
-            L'agenzia funebre Pecorari è sempre a vostra disposizione, tutti i giorni a qualsiasi ora. Non abbiate fretta in una situazione così delicata, venite presso i nostri uffici e prendetevi il tempo necessario per scegliere ogni elemento, con l'accortezza di rispettare sempre la volontà del defunto.
+          <h1 className="font-serif text-3xl md:text-4xl text-text-primary mb-4">Contatti</h1>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg">
+            L'agenzia funebre Pecorari disponibile 24 ore su 24, con cortesia e affidabilità vi aiuterà nel momento difficile della perdita della persona amata. Non abbiate fretta in una situazione così delicata, venite presso i nostri uffici in via Nonantolana 555 a Modena e prendetevi il tempo necessario per scegliere ogni elemento, con l'accortezza di rispettare sempre la volontà del defunto.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
           <div>
-            <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Compila il modulo per richiedere maggiori informazioni</h2>
+            <h2 className="font-serif text-2xl text-text-primary mb-6">Compila il modulo per richiedere maggiori informazioni</h2>
             <p className="text-sm text-text-muted mb-6">* Campi obbligatori</p>
 
             {inviato && (
-              <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md mb-6 text-sm">
+              <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md mb-6 text-[15px]">
                 Grazie per averci contattato. Ti risponderemo il più presto possibile.
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-xl border border-tortora-200 shadow-sm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="contatto-nome" className="block text-sm font-medium text-text mb-1">*Nome</label>
+                  <label htmlFor="contatto-nome" className="block text-sm font-semibold text-text-primary mb-1">*Nome</label>
                   <input
                     id="contatto-nome"
                     type="text"
                     required
                     value={formData.nome}
                     onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                    className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contatto-cognome" className="block text-sm font-medium text-text mb-1">*Cognome</label>
+                  <label htmlFor="contatto-cognome" className="block text-sm font-semibold text-text-primary mb-1">*Cognome</label>
                   <input
                     id="contatto-cognome"
                     type="text"
                     required
                     value={formData.cognome}
                     onChange={(e) => setFormData({ ...formData, cognome: e.target.value })}
-                    className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="contatto-email" className="block text-sm font-medium text-text mb-1">*Email</label>
+                <label htmlFor="contatto-email" className="block text-sm font-semibold text-text-primary mb-1">*Email</label>
                 <input
                   id="contatto-email"
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="contatto-telefono" className="block text-sm font-medium text-text mb-1">Telefono</label>
+                <label htmlFor="contatto-telefono" className="block text-sm font-semibold text-text-primary mb-1">Telefono</label>
                 <input
                   id="contatto-telefono"
                   type="tel"
                   value={formData.telefono}
                   onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                  className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="contatto-messaggio" className="block text-sm font-medium text-text mb-1">*Messaggio</label>
+                <label htmlFor="contatto-messaggio" className="block text-sm font-semibold text-text-primary mb-1">*Messaggio</label>
                 <textarea
                   id="contatto-messaggio"
                   required
                   rows={5}
                   value={formData.messaggio}
                   onChange={(e) => setFormData({ ...formData, messaggio: e.target.value })}
-                  className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none"
+                  className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500 resize-none"
                 />
               </div>
 
@@ -102,16 +102,16 @@ export default function ContattiPage() {
                   required
                   checked={formData.privacy}
                   onChange={(e) => setFormData({ ...formData, privacy: e.target.checked })}
-                  className="mt-1 rounded border-border"
+                  className="mt-1 rounded border-tortora-300"
                 />
-                <label htmlFor="contatto-privacy" className="text-sm text-text-muted">
+                <label htmlFor="contatto-privacy" className="text-[15px] text-text-secondary">
                   Ho letto l'informativa e autorizzo il trattamento dei miei dati personali per le finalità ivi indicate. *
                 </label>
               </div>
 
               <button
                 type="submit"
-                className="bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm"
+                className="bg-tortora-700 text-white px-6 py-3 rounded-md hover:bg-tortora-800 transition-colors font-semibold text-[15px]"
               >
                 Invia messaggio
               </button>
@@ -120,95 +120,69 @@ export default function ContattiPage() {
 
           {/* Info sedi */}
           <div>
-            <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Sedi e recapiti</h2>
+            <h2 className="font-serif text-2xl text-text-primary mb-6">Sedi e recapiti</h2>
 
             <div className="space-y-6 mb-8">
               {/* Modena */}
-              <div className="bg-surface border border-border rounded-xl p-6">
-                <h3 className="font-serif text-lg text-primary font-semibold mb-3">Modena — Via Nonantolana, 555</h3>
-                <div className="space-y-2 text-sm text-text-muted">
+              <div className="bg-white border border-tortora-200 rounded-xl p-6 shadow-sm">
+                <h3 className="font-serif text-lg text-text-primary mb-3">Modena — Via Nonantolana, 555</h3>
+                <div className="space-y-2 text-[15px] text-text-secondary">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-accent shrink-0" />
+                    <MapPin className="w-4 h-4 text-tortora-700 shrink-0" />
                     Via Nonantolana, 555 — 41122 Modena (MO)
                   </p>
                   <p className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-accent shrink-0" />
-                    <a href="tel:+39059260667" className="hover:text-primary transition-colors">+39 059 260667</a>
+                    <Phone className="w-4 h-4 text-tortora-700 shrink-0" />
+                    <a href="tel:+39059260667" className="hover:text-tortora-800 transition-colors">+39 059 260667</a>
                   </p>
                   <p className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-accent shrink-0" />
-                    <a href="tel:+393387277095" className="hover:text-primary transition-colors">+39 338 7277095 (Cellulare)</a>
+                    <Phone className="w-4 h-4 text-tortora-700 shrink-0" />
+                    <a href="tel:+393387277095" className="hover:text-tortora-800 transition-colors">+39 338 7277095 (Cellulare)</a>
                   </p>
-                </div>
-                <div className="mt-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.5!2d10.95!3d44.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlhIE5vbmFudG9sYW5hIDU1NSwgNDEyMiBNb2RlbmEgTU8!5e0!3m2!1sit!2sit!4v1"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Mappa sede Modena"
-                    className="rounded-lg"
-                  ></iframe>
                 </div>
               </div>
 
               {/* Nonantola */}
-              <div className="bg-surface border border-border rounded-xl p-6">
-                <h3 className="font-serif text-lg text-primary font-semibold mb-3">Nonantola — Piazza Liberazione, 34</h3>
-                <div className="space-y-2 text-sm text-text-muted">
+              <div className="bg-white border border-tortora-200 rounded-xl p-6 shadow-sm">
+                <h3 className="font-serif text-lg text-text-primary mb-3">Nonantola — Piazza Liberazione, 34</h3>
+                <div className="space-y-2 text-[15px] text-text-secondary">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-accent shrink-0" />
+                    <MapPin className="w-4 h-4 text-tortora-700 shrink-0" />
                     Piazza Liberazione, 34 — 41015 Nonantola (MO)
                   </p>
                   <p className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-accent shrink-0" />
-                    <a href="tel:+39059549279" className="hover:text-primary transition-colors">+39 059 549279</a>
+                    <Phone className="w-4 h-4 text-tortora-700 shrink-0" />
+                    <a href="tel:+39059549279" className="hover:text-tortora-800 transition-colors">+39 059 549279</a>
                   </p>
                   <p className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-accent shrink-0" />
-                    <a href="tel:+393387277095" className="hover:text-primary transition-colors">+39 338 7277095 (Cellulare)</a>
+                    <Phone className="w-4 h-4 text-tortora-700 shrink-0" />
+                    <a href="tel:+393387277095" className="hover:text-tortora-800 transition-colors">+39 338 7277095 (Cellulare)</a>
                   </p>
-                </div>
-                <div className="mt-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2836!2d11.09!3d44.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUGlhenphIExpYmVyYXppb25lIDM0LCA0MTAxNSBOb25hbnRvbGEgTU8!5e0!3m2!1sit!2sit!4v1"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Mappa sede Nonantola"
-                    className="rounded-lg"
-                  ></iframe>
                 </div>
               </div>
             </div>
 
             {/* Orari */}
-            <div className="bg-surface border border-border rounded-xl p-6">
+            <div className="bg-white border border-tortora-200 rounded-xl p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-5 h-5 text-primary" />
-                <h3 className="font-serif text-lg text-primary font-semibold">Orari di apertura</h3>
+                <Clock className="w-5 h-5 text-tortora-700" />
+                <h3 className="font-serif text-lg text-text-primary">Orari di apertura</h3>
               </div>
-              <p className="text-text-muted text-sm">
+              <p className="text-text-secondary text-[15px]">
                 Lun — Dom: 00:00 — 23:59
               </p>
-              <p className="text-text-muted text-sm mt-1">
+              <p className="text-text-secondary text-[15px] mt-1">
                 Servizio attivo 24 ore su 24, 7 giorni su 7
               </p>
             </div>
 
             {/* Email */}
-            <div className="mt-6 text-center">
-              <p className="text-text-muted text-sm">
+            <div className="mt-6 text-center bg-white border border-tortora-200 rounded-xl p-6 shadow-sm">
+              <p className="text-text-secondary text-[15px]">
                 Potete contattarci anche via email:
               </p>
-              <a href="mailto:onoranzefunebripecorari@gmail.com" className="text-primary font-medium hover:text-primary-light transition-colors">
-                onoranzefunebripecorari@gmail.com
+              <a href="mailto:pecorarisrl@yahoo.it" className="text-tortora-800 font-semibold hover:text-tortora-900 transition-colors text-lg">
+                pecorarisrl@yahoo.it
               </a>
             </div>
           </div>

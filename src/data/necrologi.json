@@ -4,13 +4,13 @@
     "nome": "Anna Benassi ved. Corradi",
     "eta": 87,
     "dataNascita": "1938-03-12",
-    "dataDecesso": "2026-02-09",
+    "dataDecesso": "2026-10-03",
     "comune": "Modena",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "I figli, i nipoti e i parenti tutti danno il triste annuncio della scomparsa della loro amata Anna. La ringraziano per quanto ha dato loro e la ricorderanno per sempre con amore.",
     "cerimonia": {
-      "data": "2026-02-12",
+      "data": "2026-10-06",
       "ora": "10:00",
       "luogo": "Chiesa di San Agostino",
       "indirizzo": "Via Selmi, 41121 Modena"
@@ -23,12 +23,12 @@
     },
     "sepoltura": "Cimitero di Modena - Campo Santo",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-10T08:15:00",
+    "dataPubblicazione": "2026-10-04T08:15:00",
     "pensieri": [
       {
         "autore": "Famiglia Rossi",
         "testo": "Sempre nel nostro cuore, cara Anna.",
-        "data": "2026-02-10T10:30:00",
+        "data": "2026-10-04T10:30:00",
         "visibileFamiglia": false
       }
     ],
@@ -39,13 +39,13 @@
     "nome": "Giuseppe Ferrari",
     "eta": 74,
     "dataNascita": "1951-07-22",
-    "dataDecesso": "2026-02-08",
+    "dataDecesso": "2026-10-02",
     "comune": "Nonantola",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "La moglie Maria, i figli Luca e Francesca con le rispettive famiglie, annunciano la scomparsa del caro Giuseppe. La Messa di esequie sarà celebrata nella Chiesa Parrocchiale di Nonantola.",
     "cerimonia": {
-      "data": "2026-02-11",
+      "data": "2026-10-05",
       "ora": "15:30",
       "luogo": "Chiesa Parrocchiale di Nonantola",
       "indirizzo": "Piazza Liberazione, 41015 Nonantola"
@@ -58,7 +58,7 @@
     },
     "sepoltura": "Cimitero di Nonantola",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-09T14:00:00",
+    "dataPubblicazione": "2026-10-03T14:00:00",
     "pensieri": [],
     "slug": "giuseppe-ferrari"
   },
@@ -67,13 +67,13 @@
     "nome": "Maria Luisa Montanari",
     "eta": 92,
     "dataNascita": "1933-11-05",
-    "dataDecesso": "2026-02-07",
+    "dataDecesso": "2026-10-01",
     "comune": "Modena",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "Con immenso dolore i figli Paola e Roberto, i nipoti e parenti tutti danno il triste annuncio della scomparsa della cara Maria Luisa. Donna di grande fede e generosità, resterà per sempre nei nostri cuori.",
     "cerimonia": {
-      "data": "2026-02-10",
+      "data": "2026-10-04",
       "ora": "09:30",
       "luogo": "Chiesa di Santa Maria della Pomposa",
       "indirizzo": "Via della Pomposa, 41121 Modena"
@@ -86,18 +86,18 @@
     },
     "sepoltura": null,
     "cremazione": "Fornace Crematoria - Modena",
-    "dataPubblicazione": "2026-02-08T07:45:00",
+    "dataPubblicazione": "2026-10-02T07:45:00",
     "pensieri": [
       {
         "autore": "Comunità Parrocchiale",
         "testo": "Il Signore ti accolga nella sua pace. Preghiamo per te.",
-        "data": "2026-02-08T11:00:00",
+        "data": "2026-10-02T11:00:00",
         "visibileFamiglia": false
       },
       {
         "autore": "Famiglia Bianchi",
         "testo": "Cara Maria Luisa, grazie per tutti i momenti belli condivisi.",
-        "data": "2026-02-09T09:15:00",
+        "data": "2026-10-03T09:15:00",
         "visibileFamiglia": false
       }
     ],
@@ -108,13 +108,13 @@
     "nome": "Luigi Guidotti",
     "eta": 68,
     "dataNascita": "1957-04-18",
-    "dataDecesso": "2026-02-10",
+    "dataDecesso": "2026-09-30",
     "comune": "Ravarino",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "La moglie Carla, i figli Marco e Silvia, i nipoti e parenti tutti piangono la scomparsa del caro Luigi. Uomo di grande bontà e dedizione alla famiglia.",
     "cerimonia": {
-      "data": "2026-02-13",
+      "data": "2026-10-03",
       "ora": "14:00",
       "luogo": "Chiesa di Ravarino",
       "indirizzo": "Via Roma, Ravarino (MO)"
@@ -127,7 +127,7 @@
     },
     "sepoltura": "Cimitero di Ravarino",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-10T16:30:00",
+    "dataPubblicazione": "2026-10-01T16:30:00",
     "pensieri": [],
     "slug": "luigi-guidotti"
   },
@@ -136,13 +136,13 @@
     "nome": "Carla Venturi n. Bellelli",
     "eta": 81,
     "dataNascita": "1944-09-30",
-    "dataDecesso": "2026-02-06",
+    "dataDecesso": "2026-09-29",
     "comune": "Modena",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "I figli Alessandra e Paolo con le famiglie, i fratelli e parenti tutti danno il triste annuncio della scomparsa della cara Carla. La cerimonia si svolgerà in forma strettamente privata.",
     "cerimonia": {
-      "data": "2026-02-09",
+      "data": "2026-10-02",
       "ora": "11:00",
       "luogo": "Chiesa di San Francesco",
       "indirizzo": "Via Carteria, 41121 Modena"
@@ -155,12 +155,12 @@
     },
     "sepoltura": "Cimitero di Modena - Campo Santo",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-07T09:00:00",
+    "dataPubblicazione": "2026-09-30T09:00:00",
     "pensieri": [
       {
         "autore": "Famiglia Gamberini",
         "testo": "Cara Carla, il tuo sorriso ci mancherà tantissimo. Ti vogliamo bene.",
-        "data": "2026-02-07T15:20:00",
+        "data": "2026-09-30T15:20:00",
         "visibileFamiglia": false
       }
     ],
@@ -171,13 +171,13 @@
     "nome": "Franco Marchesini",
     "eta": 79,
     "dataNascita": "1946-12-14",
-    "dataDecesso": "2026-02-11",
+    "dataDecesso": "2026-09-28",
     "comune": "Nonantola",
     "rito": "Laico",
     "foto": null,
     "annuncio": "La moglie Teresa, i figli Andrea e Valentina, i nipoti amatissimi e parenti tutti piangono la scomparsa del caro Franco. La sua passione per la vita e il suo sorriso resteranno per sempre con noi.",
     "cerimonia": {
-      "data": "2026-02-14",
+      "data": "2026-10-01",
       "ora": "10:30",
       "luogo": "Sala Commiato Civico",
       "indirizzo": "Cimitero di Nonantola, 41015 Nonantola"
@@ -190,7 +190,7 @@
     },
     "sepoltura": null,
     "cremazione": "Fornace Crematoria - Modena",
-    "dataPubblicazione": "2026-02-11T11:00:00",
+    "dataPubblicazione": "2026-09-29T11:00:00",
     "pensieri": [],
     "slug": "franco-marchesini"
   },
@@ -199,13 +199,13 @@
     "nome": "Elda Parmiggiani ved. Ghezzi",
     "eta": 95,
     "dataNascita": "1930-06-25",
-    "dataDecesso": "2026-02-05",
+    "dataDecesso": "2026-09-27",
     "comune": "Modena",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "I figli, nipoti e pronipoti piangono la scomparsa della cara Elda. Donna di grande saggezza e amore infinito. La ringraziamo per tutto ciò che ci ha donato.",
     "cerimonia": {
-      "data": "2026-02-08",
+      "data": "2026-09-30",
       "ora": "15:00",
       "luogo": "Chiesa di San Domenico",
       "indirizzo": "Corso Canalgrande, 41121 Modena"
@@ -218,18 +218,18 @@
     },
     "sepoltura": "Cimitero di Modena - Campo Santo",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-06T08:30:00",
+    "dataPubblicazione": "2026-09-28T08:30:00",
     "pensieri": [
       {
         "autore": "Famiglia Tosi",
         "testo": "Nonna Elda, ti ricorderemo sempre con immenso amore.",
-        "data": "2026-02-06T12:00:00",
+        "data": "2026-09-28T12:00:00",
         "visibileFamiglia": false
       },
       {
         "autore": "Centro Anziani Modena",
         "testo": "Cara Elda, la tua presenza era un dono per tutti noi.",
-        "data": "2026-02-07T10:45:00",
+        "data": "2026-09-29T10:45:00",
         "visibileFamiglia": false
       }
     ],
@@ -240,13 +240,13 @@
     "nome": "Roberto Caselli",
     "eta": 63,
     "dataNascita": "1962-08-03",
-    "dataDecesso": "2026-02-11",
+    "dataDecesso": "2026-09-26",
     "comune": "Modena",
     "rito": "Cattolico",
     "foto": null,
     "annuncio": "La moglie Daniela, i figli Simone e Giulia, i fratelli e parenti tutti piangono la prematura scomparsa del caro Roberto. La sua energia e il suo entusiasmo mancheranno a tutti.",
     "cerimonia": {
-      "data": "2026-02-14",
+      "data": "2026-09-29",
       "ora": "15:30",
       "luogo": "Chiesa di Sant'Antonio Abate",
       "indirizzo": "Via Emilia Centro, 41121 Modena"
@@ -259,7 +259,7 @@
     },
     "sepoltura": "Cimitero di Modena - Campo Santo",
     "cremazione": null,
-    "dataPubblicazione": "2026-02-12T07:00:00",
+    "dataPubblicazione": "2026-09-27T07:00:00",
     "pensieri": [],
     "slug": "roberto-caselli"
   }

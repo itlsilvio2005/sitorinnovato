@@ -9,7 +9,7 @@ export function formatDateIT(dateStr: string): string {
 
 export function formatDateShort(dateStr: string): string {
   const date = new Date(dateStr);
-  return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+  return `${date.getDate()} ${date.toLocaleString('it-IT', { month: 'short' })} ${date.getFullYear()}`;
 }
 
 export function getRelativeTime(dateStr: string): string {

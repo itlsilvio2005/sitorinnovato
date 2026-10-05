@@ -28,17 +28,17 @@ export default function FiltriNecrologi({
   const hasFilters = searchTerm || comune || dataDal || dataAl;
 
   return (
-    <div className="bg-white border border-[#e0e0e0] rounded-xl p-4 md:p-6">
+    <div className="bg-white border border-tortora-200 rounded-xl p-4 md:p-6 shadow-sm">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
         {/* Search */}
         <div className="lg:col-span-2 relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-light" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
           <input
             type="text"
             placeholder="Cerca per nome..."
             value={searchTerm}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+            className="w-full pl-10 pr-4 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
             aria-label="Cerca necrologio per nome"
           />
         </div>
@@ -47,7 +47,7 @@ export default function FiltriNecrologi({
         <select
           value={comune}
           onChange={(e) => onComuneChange(e.target.value)}
-          className="w-full px-3 py-2.5 border border-border rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+          className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] bg-white focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
           aria-label="Filtra per comune"
         >
           <option value="">Tutti i comuni</option>
@@ -61,9 +61,8 @@ export default function FiltriNecrologi({
           type="date"
           value={dataDal}
           onChange={(e) => onDataDalChange(e.target.value)}
-          className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+          className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
           aria-label="Data dal"
-          placeholder="Dal"
         />
 
         {/* Data al */}
@@ -71,9 +70,8 @@ export default function FiltriNecrologi({
           type="date"
           value={dataAl}
           onChange={(e) => onDataAlChange(e.target.value)}
-          className="w-full px-3 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+          className="w-full px-3 py-2.5 border border-tortora-200 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-tortora-500/20 focus:border-tortora-500"
           aria-label="Data al"
-          placeholder="Al"
         />
       </div>
 
@@ -81,7 +79,7 @@ export default function FiltriNecrologi({
         <div className="mt-3 flex justify-end">
           <button
             onClick={onReset}
-            className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-primary transition-colors"
+            className="inline-flex items-center gap-1.5 text-[15px] text-text-muted hover:text-tortora-800 transition-colors"
           >
             <X className="w-4 h-4" />
             Azzera filtri

@@ -1,6 +1,8 @@
-# Onoranze Funebri Pecorari — Sito Web
+# Onoranze Funebri Pecorari — Sito Web DEMO
 
-Sito web moderno per l'agenzia funebre Pecorari di Modena e Nonantola, realizzato con React + Vite + TypeScript + Tailwind CSS.
+Sito web moderno per l'agenzia funebre Pecorari di Modena e Nonantola, realizzato con React + Vite + TypeScript + Tailwind CSS v4.
+
+**Questo è un sito DEMO statico** — nessun backend reale, tutti i dati sono mock.
 
 ## 🚀 Avvio rapido
 
@@ -25,69 +27,48 @@ I file generati saranno nella cartella `dist/`.
 src/
 ├── App.tsx                    # Router principale
 ├── main.tsx                   # Entry point
-├── index.css                  # Stili globali (Tailwind v4)
+├── index.css                  # Stili globali (Tailwind v4 + scala tortora)
 ├── components/
 │   ├── Header.tsx             # Header con navigazione
 │   ├── Footer.tsx             # Footer con sedi e contatti
-│   ├── FloatingButtons.tsx    # WhatsApp flottante + barra chiama mobile
-│   ├── NecrologioCard.tsx     # Card necrologio riutilizzabile
+│   ├── FloatingButtons.tsx    # WhatsApp + Chatbot + barra chiama mobile
+│   ├── Chatbot.tsx            # Chatbot demo "Assistente Pecorari"
+│   ├── Modal.tsx              # Modale riutilizzabile
+│   ├── NecrologioCard.tsx     # Card necrologio con modali fiori/pensieri
 │   └── FiltriNecrologi.tsx    # Filtri ricerca necrologi
 ├── pages/
-│   ├── Home.tsx               # Pagina principale
+│   ├── Home.tsx               # Pagina principale con hero
 │   ├── ServizioPage.tsx       # Pagine servizi (dinamica)
 │   ├── DecessoPage.tsx        # Pagine decesso (dinamica)
 │   ├── NecrologiPage.tsx      # Elenco necrologi con filtri
 │   ├── NecrologioDetailPage.tsx # Dettaglio singolo necrologio
-│   └── ContattiPage.tsx       # Contatti con form e mappe
+│   └── ContattiPage.tsx       # Contatti con form
 ├── data/
-│   └── necrologi.json         # Dati necrologi (fittizi)
+│   ├── necrologi.json         # 8 necrologi fittizi (settembre-ottobre 2026)
+│   └── bot-faq.ts             # FAQ per il chatbot
 └── lib/
-    ├── necrologi.ts           # Data layer astratto
-    └── utils.ts               # Utility (date, formattazione)
+    ├── necrologi.ts           # Data layer astratto (pronto per API/Supabase)
+    └── utils.ts               # Utility (date IT, formattazione)
 ```
 
-## 🎨 Palette colori
-
-I colori sono definiti come variabili CSS in `src/index.css`:
+## 🎨 Palette colori (Tortora)
 
 | Token | Valore | Utilizzo |
 |-------|--------|----------|
-| `--color-primary` | `#1b2a4a` | Blu scuro navy, testi principali, CTA |
-| `--color-accent` | `#b8860b` | Oro/ambra, accenti decorativi |
-| `--color-surface` | `#f8f7f5` | Sfondo sezioni alternate |
-| `--color-text` | `#1a1a1a` | Testo principale |
-| `--color-text-muted` | `#4a4a4a` | Testo secondario |
+| `tortora-50` | `#F5F3F0` | Sfondi chiari |
+| `tortora-100` | `#EBE7E1` | Sfondi sezioni alternate |
+| `tortora-200` | `#D6CFC5` | Bordi |
+| `tortora-700` | `#766B5E` | Header, bottoni CTA, accenti |
+| `tortora-800` | `#5A5147` | Footer, bottoni scuri |
+| `tortora-900` | `#3E3730` | Hover stati scuri |
+| `text-primary` | `#2B2622` | Testo principale (quasi nero caldo) |
+| `text-secondary` | `#4A433D` | Testo secondario |
+| `text-muted` | `#6B635B` | Testo disattivato |
 
 **Font:**
-- Titoli: Playfair Display (serif)
-- Testo: Inter (sans-serif)
-
-## 📋 Sostituire i dati fittizi
-
-Il data layer è astratto in `src/lib/necrologi.ts`. Per collegare un database reale (es. Supabase):
-
-1. Modifica le funzioni in `src/lib/necrologi.ts`:
-   - `getNecrologi()` → query al database
-   - `getNecrologio(slug)` → query singola entry
-   - `getComuni()` → query distinct comuni
-
-2. Mantieni la stessa interfaccia `Necrologio` per non toccare l'UI.
-
-### Esempio con Supabase:
-
-```typescript
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient('URL', 'KEY');
-
-export async function getNecrologi(): Promise<Necrologio[]> {
-  const { data } = await supabase
-    .from('necrologi')
-    .select('*')
-    .order('dataPubblicazione', { ascending: false });
-  return data || [];
-}
-```
+- Titoli: Antic Didone (serif)
+- Testo: Roboto (sans-serif)
+- Servizi: Mate SC (small caps)
 
 ## 📱 Funzionalità
 
@@ -95,15 +76,42 @@ export async function getNecrologi(): Promise<Necrologio[]> {
 - ✅ Accessibile (contrasti AA, focus visibili, aria-labels)
 - ✅ SEO base (title, meta, Open Graph, dati strutturati LocalBusiness)
 - ✅ WhatsApp flottante + barra chiama sticky mobile
+- ✅ Chatbot demo "Assistente Pecorari" con FAQ
 - ✅ Sezione Necrologi completa con filtri e dettaglio
+- ✅ Modali per "Invia fiori" e "Lascia un pensiero" (demo)
 - ✅ Form contatti con validazione
 - ✅ Animazioni lievi (fade/slide)
-- ✅ Navigazione con dropdown per servizi e decesso
+- ✅ Container centrato max 1200px
+- ✅ Hero con gradiente tortora
+
+## 🤖 Chatbot Demo
+
+Il chatbot è in `/src/components/Chatbot.tsx` e usa le FAQ in `/src/data/bot-faq.ts`.
+
+Per sostituire con un vero LLM:
+```typescript
+// In bot-faq.ts, sostituisci getBotResponse con:
+export async function getBotResponse(message: string): Promise<string> {
+  const response = await fetch('/api/chat', {
+    method: 'POST',
+    body: JSON.stringify({ message })
+  });
+  const data = await response.json();
+  return data.answer;
+}
+```
+
+## 📋 Sostituire i dati fittizi
+
+Il data layer è astratto in `src/lib/necrologi.ts`. Per collegare un database reale:
+
+1. Modifica le funzioni in `src/lib/necrologi.ts`
+2. Mantieni la stessa interfaccia `Necrologio`
 
 ## 📞 Contatti originali
 
 - **Modena:** Via Nonantolana, 555 — 41122 — Tel. 059 260667
 - **Nonantola:** Piazza Liberazione, 34 — 41015 — Tel. 059 549279
 - **Cellulare/WhatsApp:** 338 7277095
-- **Email:** onoranzefunebripecorari@gmail.com
+- **Email:** pecorarisrl@yahoo.it
 - **P.IVA:** 02755090368
