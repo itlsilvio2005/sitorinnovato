@@ -28,7 +28,7 @@ export default function FiltriNecrologi({
   const hasFilters = searchTerm || comune || dataDal || dataAl;
 
   return (
-    <div className="bg-white border border-border rounded-xl p-4 md:p-6">
+    <div className="bg-white border border-[#e0e0e0] rounded-xl p-4 md:p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
         {/* Search */}
         <div className="lg:col-span-2 relative">

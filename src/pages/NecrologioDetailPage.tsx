@@ -59,19 +59,19 @@ export default function NecrologioDetailPage() {
         </Link>
 
         {/* Header */}
-        <div className="bg-surface border border-border rounded-xl p-6 md:p-10 mb-8">
+        <div className="bg-[#f7f7f7] border border-[#e0e0e0] rounded-xl p-6 md:p-10 mb-8">
           <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Avatar */}
             <div className="relative shrink-0">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center shadow-sm">
-                <span className="font-serif text-primary font-bold text-2xl md:text-3xl">{initials}</span>
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-[#68CCD1]/30 flex items-center justify-center shadow-sm">
+                <span className="font-['Antic_Didone'] text-[#463939] text-2xl md:text-3xl">{initials}</span>
               </div>
-              <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 rounded-full border border-accent/30 scale-110"></div>
+              <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 rounded-full border border-[#68CCD1]/20 scale-110"></div>
             </div>
 
             <div className="flex-1">
-              <p className="text-xs text-text-light uppercase tracking-wider mb-1">Nel ricordo di</p>
-              <h1 className="font-serif text-2xl md:text-4xl text-primary font-bold mb-2">{necrologio.nome}</h1>
+              <p className="text-xs text-[#999] uppercase tracking-wider mb-1">Nel ricordo di</p>
+              <h1 className="font-['Antic_Didone'] text-2xl md:text-4xl text-black mb-2 font-normal">{necrologio.nome}</h1>
               <p className="text-text-muted">
                 <span className="inline-flex items-center gap-1"><MapPin className="w-4 h-4 text-accent" /> {necrologio.comune}</span>
               </p>
@@ -90,14 +90,14 @@ export default function NecrologioDetailPage() {
 
         {/* Il commiato */}
         <section className="mb-8">
-          <h2 className="font-serif text-2xl text-primary mb-6">Il commiato</h2>
+          <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Il commiato</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Cerimonia */}
-            <div className="bg-surface border border-border-light rounded-xl p-5">
+            <div className="bg-[#f7f7f7] border border-[#f0f0f0] rounded-xl p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Church className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-primary text-sm uppercase tracking-wide">Cerimonia</h3>
+                <Church className="w-5 h-5 text-[#68CCD1]" />
+                <h3 className="font-semibold text-[#68CCD1] text-sm uppercase tracking-wide">Cerimonia</h3>
               </div>
               <p className="text-text font-medium">{formatDateTimeCerimonia(necrologio.cerimonia.data, necrologio.cerimonia.ora)}</p>
               <p className="text-text-muted text-sm mt-1">{necrologio.cerimonia.luogo}</p>
@@ -113,10 +113,10 @@ export default function NecrologioDetailPage() {
             </div>
 
             {/* Camera ardente */}
-            <div className="bg-surface border border-border-light rounded-xl p-5">
+            <div className="bg-[#f7f7f7] border border-[#f0f0f0] rounded-xl p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-primary text-sm uppercase tracking-wide">Camera Ardente</h3>
+                <Clock className="w-5 h-5 text-[#68CCD1]" />
+                <h3 className="font-semibold text-[#68CCD1] text-sm uppercase tracking-wide">Camera Ardente</h3>
               </div>
               <p className="text-text font-medium">{necrologio.cameraArdente.luogo}</p>
               <p className="text-text-muted text-sm mt-1">{necrologio.cameraArdente.indirizzo}</p>
@@ -141,23 +141,23 @@ export default function NecrologioDetailPage() {
           <div className="flex flex-wrap gap-3">
             <Link
               to={`/necrologi/${necrologio.comune.toLowerCase()}/${necrologio.slug}#messaggio`}
-              className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2.5 rounded-md hover:bg-primary-light transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-4 py-2.5 rounded-md hover:bg-[#4FB8BD] transition-colors text-sm font-medium"
             >
               <Send className="w-4 h-4" />
               Invia un messaggio
             </Link>
-            <button className="inline-flex items-center gap-2 bg-surface border border-border text-text px-4 py-2.5 rounded-md hover:bg-border-light transition-colors text-sm font-medium">
+            <button className="inline-flex items-center gap-2 bg-[#f7f7f7] border border-[#e0e0e0] text-[#666] px-4 py-2.5 rounded-md hover:bg-[#e0e0e0] transition-colors text-sm font-medium">
               <Camera className="w-4 h-4" />
               Invia una foto
             </button>
             <a
               href="tel:+39059260667"
-              className="inline-flex items-center gap-2 bg-accent text-white px-4 py-2.5 rounded-md hover:bg-accent-light transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 bg-[#463939] text-white px-4 py-2.5 rounded-md hover:bg-[#5C4C4C] transition-colors text-sm font-medium"
             >
               <Flower className="w-4 h-4" />
               Invia dei fiori
             </a>
-            <button className="inline-flex items-center gap-2 bg-surface border border-border text-text-muted px-4 py-2.5 rounded-md hover:bg-border-light transition-colors text-sm">
+            <button className="inline-flex items-center gap-2 bg-[#f7f7f7] border border-[#e0e0e0] text-[#888] px-4 py-2.5 rounded-md hover:bg-[#e0e0e0] transition-colors text-sm">
               <Lock className="w-4 h-4" />
               Area famiglia
             </button>
@@ -166,24 +166,24 @@ export default function NecrologioDetailPage() {
 
         {/* Messaggi di cordoglio */}
         <section className="mb-8">
-          <h2 className="font-serif text-2xl text-primary mb-6">Messaggi di cordoglio</h2>
+          <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Messaggi di cordoglio</h2>
 
           {necrologio.pensieri.length > 0 ? (
             <div className="space-y-4 mb-8">
               {necrologio.pensieri.filter(p => !p.visibileFamiglia).map((pensiero, i) => (
-                <div key={i} className="border-l-2 border-accent pl-4 py-3 bg-surface rounded-r-lg">
-                  <p className="text-text italic">"{pensiero.testo}"</p>
-                  <p className="text-xs text-text-muted mt-2">— {pensiero.autore}, {getRelativeTime(pensiero.data)}</p>
+                <div key={i} className="border-l-2 border-[#68CCD1] pl-4 py-3 bg-[#f7f7f7] rounded-r-lg">
+                  <p className="text-[#666] italic">"{pensiero.testo}"</p>
+                  <p className="text-xs text-[#888] mt-2">— {pensiero.autore}, {getRelativeTime(pensiero.data)}</p>
                 </div>
               ))}
             </div>
           ) : (
-            <p className="text-text-muted text-sm mb-8">Nessun messaggio di cordoglio ancora. Sii il primo a lasciare un pensiero.</p>
+            <p className="text-[#666] text-sm mb-8">Nessun messaggio di cordoglio ancora. Sii il primo a lasciare un pensiero.</p>
           )}
 
           {/* Form messaggio */}
-          <div id="messaggio" className="bg-surface border border-border rounded-xl p-6">
-            <h3 className="font-serif text-xl text-primary mb-4">Lascia un messaggio</h3>
+          <div id="messaggio" className="bg-[#f7f7f7] border border-[#e0e0e0] rounded-xl p-6">
+            <h3 className="font-['Antic_Didone'] text-xl text-black mb-4 font-normal">Lascia un messaggio</h3>
 
             {messaggioInviato && (
               <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md mb-4 text-sm">
@@ -272,7 +272,7 @@ export default function NecrologioDetailPage() {
 
               <button
                 type="submit"
-                className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-light transition-colors font-medium text-sm"
+                className="bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm"
               >
                 Invia messaggio
               </button>
@@ -281,8 +281,8 @@ export default function NecrologioDetailPage() {
         </section>
 
         {/* Condividi */}
-        <section className="border-t border-border pt-8">
-          <h3 className="text-sm font-medium text-text mb-3">Condividi</h3>
+        <section className="border-t border-[#e0e0e0] pt-8">
+          <h3 className="text-sm font-medium text-[#666] mb-3">Condividi</h3>
           <div className="flex items-center gap-3">
             <a
               href={`https://wa.me/?text=${encodeURIComponent(`Ricordo di ${necrologio.nome} - ${window.location.href}`)}`}
@@ -295,14 +295,14 @@ export default function NecrologioDetailPage() {
             </a>
             <a
               href={`mailto:?subject=Ricordo di ${necrologio.nome}&body=${encodeURIComponent(window.location.href)}`}
-              className="inline-flex items-center gap-2 bg-surface border border-border text-text px-4 py-2 rounded-md hover:bg-border-light transition-colors text-sm"
+              className="inline-flex items-center gap-2 bg-[#f7f7f7] border border-[#e0e0e0] text-[#666] px-4 py-2 rounded-md hover:bg-[#e0e0e0] transition-colors text-sm"
             >
               <Mail className="w-4 h-4" />
               Email
             </a>
             <button
               onClick={handleCopyLink}
-              className="inline-flex items-center gap-2 bg-surface border border-border text-text px-4 py-2 rounded-md hover:bg-border-light transition-colors text-sm"
+              className="inline-flex items-center gap-2 bg-[#f7f7f7] border border-[#e0e0e0] text-[#666] px-4 py-2 rounded-md hover:bg-[#e0e0e0] transition-colors text-sm"
             >
               <Copy className="w-4 h-4" />
               Copia link
@@ -311,9 +311,9 @@ export default function NecrologioDetailPage() {
         </section>
 
         {/* Pratica */}
-        <div className="mt-8 pt-6 border-t border-border text-center">
-          <p className="text-sm text-text-light">
-            Pratica curata da <strong>Onoranze Funebri Pecorari</strong> · <a href="tel:+39059260667" className="text-primary hover:text-primary-light">059 260667</a>
+        <div className="mt-8 pt-6 border-t border-[#e0e0e0] text-center">
+          <p className="text-sm text-[#999]">
+            Pratica curata da <strong>Onoranze Funebri Pecorari</strong> · <a href="tel:+39059260667" className="text-[#68CCD1] hover:text-[#4FB8BD]">059 260667</a>
           </p>
         </div>
       </div>

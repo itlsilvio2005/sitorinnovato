@@ -16,8 +16,8 @@ export default function ContattiPage() {
     <main className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="font-serif text-3xl md:text-4xl text-primary mb-4">Contatti</h1>
-          <p className="text-text-muted max-w-2xl mx-auto">
+          <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-4 font-normal">Contatti</h1>
+          <p className="text-[#666] max-w-2xl mx-auto">
             L'agenzia funebre Pecorari è sempre a vostra disposizione, tutti i giorni a qualsiasi ora. Non abbiate fretta in una situazione così delicata, venite presso i nostri uffici e prendetevi il tempo necessario per scegliere ogni elemento, con l'accortezza di rispettare sempre la volontà del defunto.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function ContattiPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
           <div>
-            <h2 className="font-serif text-2xl text-primary mb-6">Compila il modulo per richiedere maggiori informazioni</h2>
+            <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Compila il modulo per richiedere maggiori informazioni</h2>
             <p className="text-sm text-text-muted mb-6">* Campi obbligatori</p>
 
             {inviato && (
@@ -111,7 +111,7 @@ export default function ContattiPage() {
 
               <button
                 type="submit"
-                className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-light transition-colors font-medium text-sm"
+                className="bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm"
               >
                 Invia messaggio
               </button>
@@ -120,7 +120,7 @@ export default function ContattiPage() {
 
           {/* Info sedi */}
           <div>
-            <h2 className="font-serif text-2xl text-primary mb-6">Sedi e recapiti</h2>
+            <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Sedi e recapiti</h2>
 
             <div className="space-y-6 mb-8">
               {/* Modena */}

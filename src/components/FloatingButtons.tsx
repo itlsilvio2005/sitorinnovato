@@ -15,7 +15,7 @@ export default function FloatingButtons() {
       </a>
 
       {/* Sticky call bar - mobile only */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-primary text-white shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#68CCD1] text-white shadow-lg">
         <a
           href="tel:+39059260667"
           className="flex items-center justify-center gap-2 py-4 font-medium text-sm"

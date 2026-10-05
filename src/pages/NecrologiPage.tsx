@@ -59,8 +59,8 @@ export default function NecrologiPage() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="font-serif text-3xl md:text-4xl text-primary mb-3">Necrologi</h1>
-          <p className="text-text-muted max-w-2xl mx-auto">
+          <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-3 font-normal">Necrologi</h1>
+          <p className="text-[#666] max-w-2xl mx-auto">
             Registro online degli annunci funebri. Cercate il ricordo di una persona cara o consultate gli ultimi annunci pubblicati.
           </p>
         </div>

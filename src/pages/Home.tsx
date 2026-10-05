@@ -28,45 +28,33 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative bg-surface-warm py-16 md:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <section className="relative bg-[#eee] py-16 md:py-24 lg:py-32">
+        <div className="max-w-[960px] mx-auto px-4 text-center">
           <div className="fade-in">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary font-bold mb-4">
-              Onoranze funebri a Modena
+            <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl lg:text-5xl text-black font-normal mb-4">
+              Organizzazione del rito funebre<br />con professionalità e serietà
             </h1>
-            <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              Organizzazione del rito funebre con professionalità e serietà
+            <p className="text-[#666] text-lg md:text-xl max-w-2xl mx-auto mt-6 leading-relaxed">
+              Da moltissimi anni l'agenzia Onoranze Funebri Pecorari opera con serietà e discrezione nei comuni di Modena, Nonantola e Ravarino.
             </p>
-            <div className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-sm font-medium">
-              <Clock className="w-4 h-4" />
-              Servizio continuato 24h su 24 — 7 giorni su 7
-            </div>
+            <p className="text-[#666] text-base md:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+              L'agenzia organizza funerali completi sollevando i cari della persona scomparsa da qualsiasi incombenza.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Presentazione */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-text-muted text-base md:text-lg leading-relaxed">
-            Da moltissimi anni l'agenzia Onoranze Funebri Pecorari opera con serietà e discrezione nei comuni di Modena, Nonantola e Ravarino.
-          </p>
-          <p className="text-text-muted text-base md:text-lg leading-relaxed mt-4">
-            L'agenzia organizza funerali completi sollevando i cari della persona scomparsa da qualsiasi incombenza.
-          </p>
-        </div>
-      </section>
-
       {/* Servizi */}
-      <section className="py-12 md:py-16 bg-surface">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-serif text-2xl md:text-3xl text-primary text-center mb-3">Servizi funerari completi</h2>
-          <p className="text-text-muted text-center mb-10 max-w-2xl mx-auto">
+      <section className="py-12 md:py-16">
+        <div className="max-w-[960px] mx-auto px-4">
+          <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black text-center mb-3 font-normal">Servizi funerari completi</h2>
+          <hr className="border-[#999] border-t-2 max-w-xs mx-auto mb-6" />
+          <p className="text-[#666] text-center mb-10 max-w-2xl mx-auto">
             L'agenzia funebre Pecorari si occupa dei seguenti servizi:
           </p>
 
-          {/* Elenco servizi */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {/* Elenco servizi con check */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12 max-w-3xl mx-auto">
             {[
               'Trasporti funebri nazionali e internazionali',
               'Articoli funebri',
@@ -81,9 +69,9 @@ export default function Home() {
               'Lapidi e oggetti ornamentali',
               'Addobbi floreali',
             ].map((servizio) => (
-              <div key={servizio} className="flex items-center gap-3 bg-white p-4 rounded-lg border border-border-light">
-                <div className="w-2 h-2 bg-accent rounded-full shrink-0"></div>
-                <span className="text-sm text-text">{servizio}</span>
+              <div key={servizio} className="flex items-center gap-3 py-2">
+                <svg className="w-5 h-5 text-[#68CCD1] shrink-0" fill="currentColor" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>
+                <span className="text-[#666] font-['Mate_SC'] text-sm">{servizio}</span>
               </div>
             ))}
           </div>
@@ -94,13 +82,13 @@ export default function Home() {
               <Link
                 key={servizio.path}
                 to={servizio.path}
-                className="group bg-white border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/20 transition-all"
+                className="group bg-white border border-[#e0e0e0] rounded-lg p-6 hover:shadow-md hover:border-[#68CCD1] transition-all"
               >
-                <h3 className="font-serif text-lg text-primary font-semibold mb-2 group-hover:text-primary-light transition-colors">
+                <h3 className="font-['Antic_Didone'] text-lg text-[#463939] font-normal mb-2 group-hover:text-[#68CCD1] transition-colors">
                   {servizio.title}
                 </h3>
-                <p className="text-sm text-text-muted mb-4">{servizio.desc}</p>
-                <span className="inline-flex items-center gap-1 text-sm text-accent font-medium group-hover:gap-2 transition-all">
+                <p className="text-sm text-[#666] mb-4">{servizio.desc}</p>
+                <span className="inline-flex items-center gap-1 text-sm text-[#68CCD1] font-medium group-hover:gap-2 transition-all">
                   Scopri di più <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
@@ -110,30 +98,40 @@ export default function Home() {
       </section>
 
       {/* L'agenzia */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-serif text-2xl md:text-3xl text-primary text-center mb-8">L'agenzia funebre</h2>
-          <div className="space-y-4 text-text-muted leading-relaxed">
-            <p>
-              Onoranze Funebri Pecorari offre la propria esperienza per organizzare e gestire servizi funebri completi con grande discrezione e serietà.
-            </p>
-            <p>
-              Operiamo da anni in tutta la provincia di Modena, avvalendoci del prezioso operato di personale competente e sensibile.
-            </p>
-            <p>
-              Seguiamo l'allestimento della camera ardente e ci occupiamo di vestire la salma. Eseguiamo trasporti nazionali e internazionali e curiamo le procedure di tumulazione, inumazione o cremazione. Inoltre, gestiamo il disbrigo di tutte le pratiche inerenti, nonché la pubblicazione di necrologi e avvisi di lutto.
-            </p>
+      <section className="py-12 md:py-16 bg-[#f7f7f7]">
+        <div className="max-w-[960px] mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-4 font-normal">L'agenzia funebre</h2>
+              <hr className="border-[#999] border-t-2 max-w-[100px] mb-6" />
+              <div className="space-y-4 text-[#666] leading-relaxed">
+                <p>
+                  Onoranze Funebri Pecorari offre la propria esperienza per organizzare e gestire servizi funebri completi con grande discrezione e serietà.
+                </p>
+                <p>
+                  Operiamo da anni in tutta la provincia di Modena, avvalendoci del prezioso operato di personale competente e sensibile.
+                </p>
+                <p>
+                  Seguiamo l'allestimento della camera ardente e ci occupiamo di vestire la salma. Eseguiamo trasporti nazionali e internazionali e curiamo le procedure di tumulazione, inumazione o cremazione. Inoltre, gestiamo il disbrigo di tutte le pratiche inerenti, nonché la pubblicazione di necrologi e avvisi di lutto.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              <img src="https://irp.cdn-website.com/247e9246/dms3rep/multi/opt/0WO0N0000003gA6WAI_pecorari+2-1000w.png" alt="" className="w-full h-auto rounded" loading="lazy" />
+              <img src="https://irp.cdn-website.com/247e9246/dms3rep/multi/opt/0WO0N0000003gA6WAI_pecorari_1-1000w.jpg" alt="" className="w-full h-auto rounded" loading="lazy" />
+              <img src="https://irp.cdn-website.com/247e9246/dms3rep/multi/opt/0WO0N0000003gA6WAI_pecorari_2-1000w.jpg" alt="" className="w-full h-auto rounded" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Necrologi - ultimi 3 */}
       {ultimiNecrologi.length > 0 && (
-        <section className="py-12 md:py-16 bg-surface-warm">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="py-12 md:py-16">
+          <div className="max-w-[960px] mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="font-serif text-2xl md:text-3xl text-primary mb-3">Il ricordo trova voce</h2>
-              <p className="text-text-muted">Gli ultimi annunci pubblicati</p>
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black mb-3 font-normal">Il ricordo trova voce</h2>
+              <p className="text-[#666]">Gli ultimi annunci pubblicati</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {ultimiNecrologi.map((n) => (
@@ -143,7 +141,7 @@ export default function Home() {
             <div className="text-center mt-8">
               <Link
                 to="/necrologi"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary-light transition-colors"
+                className="inline-flex items-center gap-2 text-[#68CCD1] font-medium hover:text-[#4FB8BD] transition-colors"
               >
                 Consulta tutti i necrologi <ArrowRight className="w-4 h-4" />
               </Link>
@@ -152,36 +150,74 @@ export default function Home() {
         </section>
       )}
 
-      {/* Contatti / Sedi */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-serif text-2xl md:text-3xl text-primary text-center mb-3">Contattaci</h2>
-          <p className="text-text-muted text-center mb-10 max-w-2xl mx-auto">
-            L'agenzia funebre Pecorari è sempre a vostra disposizione, tutti i giorni a qualsiasi ora.
-          </p>
+      {/* Contattaci */}
+      <section className="py-12 md:py-16 bg-[#f7f7f7]">
+        <div className="max-w-[960px] mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-4 font-normal">Contattaci</h2>
+              <hr className="border-[#999] border-t-2 max-w-[100px] mb-6" />
+              <div className="space-y-3 text-[#666] leading-relaxed">
+                <p><strong>L'agenzia funebre Pecorari è sempre a vostra disposizione, tutti i giorni a qualsiasi ora.</strong></p>
+                <p>Potete contattarci tramite e-mail scrivendoci al nostro indirizzo</p>
+                <p><strong>onoranzefunebripecorari@gmail.com</strong></p>
+                <p>Oppure potete compilare il modulo nella pagina contatti (quelli con l'asterisco sono OBBLIGATORI).</p>
+                <p>Vi verrà risposto al più presto all'indirizzo da voi inserito nel campo e-Mail.</p>
+                <p>In alternativa chiamate ai numeri riportati o contattaci su WhatsApp.</p>
+              </div>
+              <Link to="/contatti" className="inline-flex items-center gap-2 mt-6 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm">
+                Contatti
+              </Link>
+            </div>
+            <div>
+              <img
+                src="https://lirp.cdn-website.com/247e9246/dms3rep/multi/opt/202005221521032952_carro+funebre1-1920w.jpeg"
+                alt="Carro funebre"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {/* Sedi */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-[960px] mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Modena */}
-            <div className="bg-surface border border-border rounded-xl p-6 text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
-              <h3 className="font-serif text-xl text-primary font-semibold mb-2">Modena</h3>
-              <p className="text-text-muted text-sm mb-3">Via Nonantolana, 555 — 41122 Modena (MO)</p>
-              <a href="tel:+39059260667" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary-light transition-colors">
-                <Phone className="w-4 h-4" />
-                059 260667
-              </a>
+            <div className="text-center">
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">Modena</h2>
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">Via Nonantolana, 555</h2>
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">TEL. 059 260667</h2>
+              <hr className="border-[#999] border-t-2 max-w-xs mx-auto my-4" />
             </div>
 
             {/* Nonantola */}
-            <div className="bg-surface border border-border rounded-xl p-6 text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
-              <h3 className="font-serif text-xl text-primary font-semibold mb-2">Nonantola</h3>
-              <p className="text-text-muted text-sm mb-3">Piazza Liberazione, 34 — 41015 Nonantola (MO)</p>
-              <a href="tel:+39059549279" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary-light transition-colors">
-                <Phone className="w-4 h-4" />
-                059 549279
-              </a>
+            <div className="text-center">
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">Nonantola</h2>
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">Piazza Liberazione, 34</h2>
+              <h2 className="font-['Antic_Didone'] text-2xl md:text-3xl text-black font-normal">TEL. 059 549279</h2>
+              <hr className="border-[#999] border-t-2 max-w-xs mx-auto my-4" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Chiamaci */}
+      <section className="py-16 md:py-20 bg-cover bg-center relative" style={{ backgroundImage: 'url(https://lirp.cdn-website.com/247e9246/dms3rep/multi/opt/130074417_lel-1920w.jpg)' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative max-w-[960px] mx-auto px-4 text-center">
+          <p className="text-white text-xl md:text-2xl mb-8">Chiamaci per informazioni</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium">
+              <Phone className="w-5 h-5" />
+              Modena +39 059 260667
+            </a>
+            <a href="tel:+39059549279" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium">
+              <Phone className="w-5 h-5" />
+              Nonantola +39 059 549279
+            </a>
           </div>
         </div>
       </section>

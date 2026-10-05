@@ -79,16 +79,16 @@ export default function ServizioPage() {
   return (
     <main className="py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4">
-        <Link to="/" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors mb-8">
+        <Link to="/" className="inline-flex items-center gap-2 text-sm text-[#666] hover:text-[#463939] transition-colors mb-8">
           <ArrowLeft className="w-4 h-4" />
           Torna alla home
         </Link>
 
-        <h1 className="font-serif text-3xl md:text-4xl text-primary mb-8">{content.title}</h1>
+        <h1 className="font-['Antic_Didone'] text-3xl md:text-4xl text-black mb-8 font-normal">{content.title}</h1>
 
         <div className="prose max-w-none">
           {content.content.map((p, i) => (
-            <p key={i} className="text-text-muted leading-relaxed mb-4">{p}</p>
+            <p key={i} className="text-[#666] leading-relaxed mb-4">{p}</p>
           ))}
         </div>
 
@@ -107,15 +107,15 @@ export default function ServizioPage() {
         )}
 
         {/* CTA */}
-        <div className="mt-12 bg-surface border border-border rounded-xl p-6 md:p-8 text-center">
-          <h2 className="font-serif text-xl text-primary mb-3">Chiamaci per informazioni</h2>
-          <p className="text-text-muted text-sm mb-4">Siamo a disposizione 24 ore su 24</p>
+        <div className="mt-12 bg-[#f7f7f7] border border-[#e0e0e0] rounded-xl p-6 md:p-8 text-center">
+          <h2 className="font-['Antic_Didone'] text-xl text-black mb-3 font-normal">Chiamaci per informazioni</h2>
+          <p className="text-[#666] text-sm mb-4">Siamo a disposizione 24 ore su 24</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-md hover:bg-primary-light transition-colors font-medium text-sm">
+            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-5 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm">
               <Phone className="w-4 h-4" />
               Modena — 059 260667
             </a>
-            <a href="tel:+39059549279" className="inline-flex items-center gap-2 bg-text text-white px-5 py-3 rounded-md hover:bg-text-muted transition-colors font-medium text-sm">
+            <a href="tel:+39059549279" className="inline-flex items-center gap-2 bg-[#463939] text-white px-5 py-3 rounded-md hover:bg-[#5C4C4C] transition-colors font-medium text-sm">
               <Phone className="w-4 h-4" />
               Nonantola — 059 549279
             </a>
