@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -20,7 +20,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />
@@ -37,6 +37,6 @@ export default function App() {
         <Footer />
         <FloatingButtons />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
