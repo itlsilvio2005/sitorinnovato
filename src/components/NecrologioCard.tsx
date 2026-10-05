@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Church, Clock, ChevronDown, ChevronUp, Flower, MessageCircle, Share2 } from 'lucide-react';
+import { MapPin, Church, Clock, ChevronDown, ChevronUp, MessageCircle, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { Necrologio } from '../lib/necrologi';
 import { getInitials, getRelativeTime, formatDateIT, formatDateTimeCerimonia } from '../lib/utils';
@@ -11,9 +11,7 @@ interface Props {
 
 export default function NecrologioCard({ necrologio }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const [showFioriModal, setShowFioriModal] = useState(false);
   const [showPensieroModal, setShowPensieroModal] = useState(false);
-  const [fioriInviato, setFioriInviato] = useState(false);
   const [pensieroInviato, setPensieroInviato] = useState(false);
   const initials = getInitials(necrologio.nome);
   const lastPensiero = necrologio.pensieri.length > 0 ? necrologio.pensieri[necrologio.pensieri.length - 1] : null;
@@ -100,13 +98,6 @@ export default function NecrologioCard({ necrologio }: Props) {
         {/* Actions */}
         <div className="flex flex-wrap items-center gap-2 p-5 pt-3 border-t border-tortora-200 bg-tortora-50">
           <button
-            onClick={() => setShowFioriModal(true)}
-            className="inline-flex items-center gap-1.5 bg-tortora-700 text-white text-xs font-semibold px-3 py-2 rounded-md hover:bg-tortora-800 transition-colors"
-          >
-            <Flower className="w-3.5 h-3.5" />
-            Invia fiori
-          </button>
-          <button
             onClick={() => setShowPensieroModal(true)}
             className="inline-flex items-center gap-1.5 bg-tortora-800 text-white text-xs font-semibold px-3 py-2 rounded-md hover:bg-tortora-900 transition-colors"
           >
@@ -137,34 +128,6 @@ export default function NecrologioCard({ necrologio }: Props) {
           </Link>
         </div>
       </article>
-
-      {/* Modal Invia Fiori */}
-      <Modal isOpen={showFioriModal} onClose={() => { setShowFioriModal(false); setFioriInviato(false); }} title="Invia fiori">
-        {fioriInviato ? (
-          <div className="text-center py-6">
-            <div className="w-16 h-16 bg-tortora-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Flower className="w-8 h-8 text-tortora-700" />
-            </div>
-            <p className="text-text-primary font-semibold text-lg mb-2">Grazie!</p>
-            <p className="text-text-secondary">Messaggio inviato (demo). Per ordinare fiori, chiamate il 059 260667.</p>
-          </div>
-        ) : (
-          <form onSubmit={(e) => { e.preventDefault(); setFioriInviato(true); }} className="space-y-4">
-            <p className="text-text-secondary text-[15px]">Per {necrologio.nome}</p>
-            <div>
-              <label className="block text-sm font-semibold text-text-primary mb-1">Nome *</label>
-              <input type="text" required className="w-full px-3 py-2 border border-tortora-200 rounded-md text-[15px] focus:outline-none focus:border-tortora-500" />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-text-primary mb-1">Messaggio</label>
-              <textarea rows={3} className="w-full px-3 py-2 border border-tortora-200 rounded-md text-[15px] focus:outline-none focus:border-tortora-500 resize-none" />
-            </div>
-            <button type="submit" className="w-full bg-tortora-700 text-white py-2.5 rounded-md hover:bg-tortora-800 transition-colors font-semibold">
-              Invia richiesta fiori
-            </button>
-          </form>
-        )}
-      </Modal>
 
       {/* Modal Lascia un pensiero */}
       <Modal isOpen={showPensieroModal} onClose={() => { setShowPensieroModal(false); setPensieroInviato(false); }} title="Lascia un pensiero">

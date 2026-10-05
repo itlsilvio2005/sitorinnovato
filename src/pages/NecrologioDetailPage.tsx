@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, Phone, Clock, Church, Share2, Mail, Copy, Send, Camera, Flower, Lock, MessageCircle } from 'lucide-react';
+import { ArrowLeft, MapPin, Phone, Clock, Church, Share2, Mail, Copy, Send, Camera, Lock, MessageCircle } from 'lucide-react';
 import { getNecrologio, Necrologio } from '../lib/necrologi';
 import { getInitials, formatDateIT, formatDateTimeCerimonia, getRelativeTime } from '../lib/utils';
 import Modal from '../components/Modal';
@@ -10,9 +10,7 @@ export default function NecrologioDetailPage() {
   const [necrologio, setNecrologio] = useState<Necrologio | null>(null);
   const [loading, setLoading] = useState(true);
   const [showMessaggioModal, setShowMessaggioModal] = useState(false);
-  const [showFioriModal, setShowFioriModal] = useState(false);
   const [messaggioInviato, setMessaggioInviato] = useState(false);
-  const [fioriInviato, setFioriInviato] = useState(false);
   const [formData, setFormData] = useState({ nome: '', cognome: '', cellulare: '', email: '', messaggio: '', privacy: false, visibileFamiglia: false });
 
   useEffect(() => {
@@ -153,13 +151,6 @@ export default function NecrologioDetailPage() {
             <button className="inline-flex items-center gap-2 bg-white border border-tortora-200 text-text-primary px-4 py-2.5 rounded-md hover:bg-tortora-50 transition-colors text-[15px] font-semibold">
               <Camera className="w-4 h-4" />
               Invia una foto
-            </button>
-            <button
-              onClick={() => setShowFioriModal(true)}
-              className="inline-flex items-center gap-2 bg-tortora-800 text-white px-4 py-2.5 rounded-md hover:bg-tortora-900 transition-colors text-[15px] font-semibold"
-            >
-              <Flower className="w-4 h-4" />
-              Invia dei fiori
             </button>
             <button className="inline-flex items-center gap-2 bg-white border border-tortora-200 text-text-muted px-4 py-2.5 rounded-md hover:bg-tortora-50 transition-colors text-[15px]">
               <Lock className="w-4 h-4" />
@@ -317,34 +308,6 @@ export default function NecrologioDetailPage() {
               className="w-full bg-tortora-700 text-white py-2.5 rounded-md hover:bg-tortora-800 transition-colors font-semibold"
             >
               Invia messaggio
-            </button>
-          </form>
-        )}
-      </Modal>
-
-      {/* Modal Fiori */}
-      <Modal isOpen={showFioriModal} onClose={() => { setShowFioriModal(false); setFioriInviato(false); }} title="Invia fiori">
-        {fioriInviato ? (
-          <div className="text-center py-6">
-            <div className="w-16 h-16 bg-tortora-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Flower className="w-8 h-8 text-tortora-700" />
-            </div>
-            <p className="text-text-primary font-semibold text-lg mb-2">Grazie!</p>
-            <p className="text-text-secondary">Messaggio inviato (demo). Per ordinare fiori, chiamate il 059 260667.</p>
-          </div>
-        ) : (
-          <form onSubmit={(e) => { e.preventDefault(); setFioriInviato(true); }} className="space-y-4">
-            <p className="text-text-secondary text-[15px]">Per {necrologio.nome}</p>
-            <div>
-              <label className="block text-sm font-semibold text-text-primary mb-1">Nome *</label>
-              <input type="text" required className="w-full px-3 py-2 border border-tortora-200 rounded-md text-[15px] focus:outline-none focus:border-tortora-500" />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-text-primary mb-1">Messaggio</label>
-              <textarea rows={3} className="w-full px-3 py-2 border border-tortora-200 rounded-md text-[15px] focus:outline-none focus:border-tortora-500 resize-none" />
-            </div>
-            <button type="submit" className="w-full bg-tortora-700 text-white py-2.5 rounded-md hover:bg-tortora-800 transition-colors font-semibold">
-              Invia richiesta fiori
             </button>
           </form>
         )}
