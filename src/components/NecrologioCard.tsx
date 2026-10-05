@@ -18,10 +18,10 @@ export default function NecrologioCard({ necrologio }: Props) {
       {/* Header: avatar + nome */}
       <div className="flex items-start gap-4 mb-4">
         <div className="relative shrink-0">
-          <div className="w-14 h-14 rounded-full bg-[#f7f7f7] border-2 border-[#68CCD1]/30 flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full bg-[#f7f7f7] border-2 border-[#B8A394]/30 flex items-center justify-center">
             <span className="font-['Antic_Didone'] text-[#463939] font-normal text-lg">{initials}</span>
           </div>
-          <div className="absolute inset-0 w-14 h-14 rounded-full border border-[#68CCD1]/20 scale-110"></div>
+          <div className="absolute inset-0 w-14 h-14 rounded-full border border-[#B8A394]/20 scale-110"></div>
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="font-['Antic_Didone'] text-xl md:text-2xl text-[#463939] font-normal leading-tight">
@@ -35,7 +35,7 @@ export default function NecrologioCard({ necrologio }: Props) {
 
       {/* Chips */}
       <div className="flex flex-wrap gap-2 mb-4">
-        <span className="inline-flex items-center gap-1 bg-[#68CCD1] text-white text-xs font-medium px-2.5 py-1 rounded-full">
+        <span className="inline-flex items-center gap-1 bg-[#B8A394] text-white text-xs font-medium px-2.5 py-1 rounded-full">
           <MapPin className="w-3 h-3" />
           {necrologio.comune}
         </span>
@@ -43,7 +43,7 @@ export default function NecrologioCard({ necrologio }: Props) {
           <Church className="w-3 h-3" />
           Rito {necrologio.rito.toLowerCase()}
         </span>
-        <span className="inline-flex items-center gap-1 text-[#68CCD1] text-xs font-medium px-2.5 py-1">
+        <span className="inline-flex items-center gap-1 text-[#B8A394] text-xs font-medium px-2.5 py-1">
           <Clock className="w-3 h-3" />
           {getRelativeTime(necrologio.dataPubblicazione)}
         </span>
@@ -52,12 +52,12 @@ export default function NecrologioCard({ necrologio }: Props) {
       {/* Cerimonia + Camera ardente */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
         <div className="bg-[#f7f7f7] rounded-lg p-3 border border-[#f0f0f0]">
-          <p className="text-xs font-semibold text-[#68CCD1] uppercase tracking-wide mb-1">Cerimonia</p>
+          <p className="text-xs font-semibold text-[#B8A394] uppercase tracking-wide mb-1">Cerimonia</p>
           <p className="text-sm text-[#463939] font-medium">{formatDateTimeCerimonia(necrologio.cerimonia.data, necrologio.cerimonia.ora)}</p>
           <p className="text-xs text-[#666] mt-1">{necrologio.cerimonia.luogo}</p>
         </div>
         <div className="bg-[#f7f7f7] rounded-lg p-3 border border-[#f0f0f0]">
-          <p className="text-xs font-semibold text-[#68CCD1] uppercase tracking-wide mb-1">Camera Ardente</p>
+          <p className="text-xs font-semibold text-[#B8A394] uppercase tracking-wide mb-1">Camera Ardente</p>
           <p className="text-sm text-[#463939] font-medium">{necrologio.cameraArdente.luogo}</p>
           <p className="text-xs text-[#666] mt-1">Oggi: {necrologio.cameraArdente.orariOggi} · Domani: {necrologio.cameraArdente.orariDomani}</p>
         </div>
@@ -66,7 +66,7 @@ export default function NecrologioCard({ necrologio }: Props) {
       {/* Accordion dettagli */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center justify-between py-2 text-sm font-medium text-[#463939] hover:text-[#68CCD1] transition-colors"
+        className="w-full flex items-center justify-between py-2 text-sm font-medium text-[#463939] hover:text-[#B8A394] transition-colors"
         aria-expanded={expanded}
       >
         <span>DETTAGLI: Camera ardente · Cerimonia · {necrologio.cremazione ? 'Cremazione' : 'Sepoltura'}</span>
@@ -83,7 +83,7 @@ export default function NecrologioCard({ necrologio }: Props) {
 
       {/* Ultimo pensiero */}
       {lastPensiero && (
-        <div className="border-l-2 border-[#68CCD1] pl-4 py-2 my-4">
+        <div className="border-l-2 border-[#B8A394] pl-4 py-2 my-4">
           <p className="text-sm text-[#666] italic">"{lastPensiero.testo}"</p>
           <p className="text-xs text-[#888] mt-1">— {lastPensiero.autore}, {getRelativeTime(lastPensiero.data)} · {necrologio.pensieri.length} {necrologio.pensieri.length === 1 ? 'pensiero' : 'pensieri'}</p>
         </div>
@@ -93,7 +93,7 @@ export default function NecrologioCard({ necrologio }: Props) {
       <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#f0f0f0]">
         <a
           href="tel:+39059260667"
-          className="inline-flex items-center gap-1.5 bg-[#68CCD1] text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-[#4FB8BD] transition-colors"
+          className="inline-flex items-center gap-1.5 bg-[#B8A394] text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-[#9C8575] transition-colors"
         >
           <Flower className="w-3.5 h-3.5" />
           Invia fiori
@@ -123,7 +123,7 @@ export default function NecrologioCard({ necrologio }: Props) {
         </p>
         <Link
           to={`/necrologi/${necrologio.comune.toLowerCase()}/${necrologio.slug}`}
-          className="text-xs font-medium text-[#68CCD1] hover:text-[#4FB8BD] transition-colors"
+          className="text-xs font-medium text-[#B8A394] hover:text-[#9C8575] transition-colors"
         >
           Scheda →
         </Link>

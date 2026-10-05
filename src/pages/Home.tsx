@@ -70,7 +70,7 @@ export default function Home() {
               'Addobbi floreali',
             ].map((servizio) => (
               <div key={servizio} className="flex items-center gap-3 py-2">
-                <svg className="w-5 h-5 text-[#68CCD1] shrink-0" fill="currentColor" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>
+                <svg className="w-5 h-5 text-[#B8A394] shrink-0" fill="currentColor" viewBox="0 0 1792 1792"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>
                 <span className="text-[#666] font-['Mate_SC'] text-sm">{servizio}</span>
               </div>
             ))}
@@ -82,13 +82,13 @@ export default function Home() {
               <Link
                 key={servizio.path}
                 to={servizio.path}
-                className="group bg-white border border-[#e0e0e0] rounded-lg p-6 hover:shadow-md hover:border-[#68CCD1] transition-all"
+                className="group bg-white border border-[#e0e0e0] rounded-lg p-6 hover:shadow-md hover:border-[#B8A394] transition-all"
               >
-                <h3 className="font-['Antic_Didone'] text-lg text-[#463939] font-normal mb-2 group-hover:text-[#68CCD1] transition-colors">
+                <h3 className="font-['Antic_Didone'] text-lg text-[#463939] font-normal mb-2 group-hover:text-[#B8A394] transition-colors">
                   {servizio.title}
                 </h3>
                 <p className="text-sm text-[#666] mb-4">{servizio.desc}</p>
-                <span className="inline-flex items-center gap-1 text-sm text-[#68CCD1] font-medium group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-sm text-[#B8A394] font-medium group-hover:gap-2 transition-all">
                   Scopri di più <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="text-center mt-8">
               <Link
                 to="/necrologi"
-                className="inline-flex items-center gap-2 text-[#68CCD1] font-medium hover:text-[#4FB8BD] transition-colors"
+                className="inline-flex items-center gap-2 text-[#B8A394] font-medium hover:text-[#9C8575] transition-colors"
               >
                 Consulta tutti i necrologi <ArrowRight className="w-4 h-4" />
               </Link>
@@ -165,7 +165,7 @@ export default function Home() {
                 <p>Vi verrà risposto al più presto all'indirizzo da voi inserito nel campo e-Mail.</p>
                 <p>In alternativa chiamate ai numeri riportati o contattaci su WhatsApp.</p>
               </div>
-              <Link to="/contatti" className="inline-flex items-center gap-2 mt-6 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm">
+              <Link to="/contatti" className="inline-flex items-center gap-2 mt-6 bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm">
                 Contatti
               </Link>
             </div>
@@ -210,11 +210,11 @@ export default function Home() {
         <div className="relative max-w-[960px] mx-auto px-4 text-center">
           <p className="text-white text-xl md:text-2xl mb-8">Chiamaci per informazioni</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium">
+            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium">
               <Phone className="w-5 h-5" />
               Modena +39 059 260667
             </a>
-            <a href="tel:+39059549279" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium">
+            <a href="tel:+39059549279" className="inline-flex items-center gap-2 bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium">
               <Phone className="w-5 h-5" />
               Nonantola +39 059 549279
             </a>

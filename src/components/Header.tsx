@@ -32,8 +32,8 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-[#e0e0e0]">
-      {/* Top bar - colore turchese originale */}
-      <div className="bg-[#68CCD1] text-white py-2 px-4">
+      {/* Top bar - colore tortora */}
+      <div className="bg-[#B8A394] text-white py-2 px-4">
         <div className="max-w-[960px] mx-auto flex items-center justify-between text-sm">
           <span className="font-medium tracking-wide text-white">SERVIZIO CONTINUATO 24H SU 24 - 7 GIORNI SU 7 - DIURNO NOTTURNO FESTIVO</span>
           <div className="hidden md:flex items-center gap-4">
@@ -97,7 +97,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href="tel:+39059260667"
-            className="hidden md:flex items-center gap-2 bg-[#68CCD1] text-white px-4 py-2 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm"
+            className="hidden md:flex items-center gap-2 bg-[#B8A394] text-white px-4 py-2 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm"
           >
             <Phone className="w-4 h-4" />
             CHIAMA ORA +39 059 260667
@@ -154,7 +154,7 @@ export default function Header() {
             <div className="pt-3 border-t border-[#e0e0e0] mt-3">
               <a
                 href="tel:+39059260667"
-                className="flex items-center justify-center gap-2 bg-[#68CCD1] text-white px-4 py-3 rounded-md font-medium text-sm"
+                className="flex items-center justify-center gap-2 bg-[#B8A394] text-white px-4 py-3 rounded-md font-medium text-sm"
               >
                 <Phone className="w-4 h-4" />
                 CHIAMA ORA — 059 260667

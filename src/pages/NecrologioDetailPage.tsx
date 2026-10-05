@@ -63,10 +63,10 @@ export default function NecrologioDetailPage() {
           <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Avatar */}
             <div className="relative shrink-0">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-[#68CCD1]/30 flex items-center justify-center shadow-sm">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-[#B8A394]/30 flex items-center justify-center shadow-sm">
                 <span className="font-['Antic_Didone'] text-[#463939] text-2xl md:text-3xl">{initials}</span>
               </div>
-              <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 rounded-full border border-[#68CCD1]/20 scale-110"></div>
+              <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 rounded-full border border-[#B8A394]/20 scale-110"></div>
             </div>
 
             <div className="flex-1">
@@ -96,8 +96,8 @@ export default function NecrologioDetailPage() {
             {/* Cerimonia */}
             <div className="bg-[#f7f7f7] border border-[#f0f0f0] rounded-xl p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Church className="w-5 h-5 text-[#68CCD1]" />
-                <h3 className="font-semibold text-[#68CCD1] text-sm uppercase tracking-wide">Cerimonia</h3>
+                <Church className="w-5 h-5 text-[#B8A394]" />
+                <h3 className="font-semibold text-[#B8A394] text-sm uppercase tracking-wide">Cerimonia</h3>
               </div>
               <p className="text-text font-medium">{formatDateTimeCerimonia(necrologio.cerimonia.data, necrologio.cerimonia.ora)}</p>
               <p className="text-text-muted text-sm mt-1">{necrologio.cerimonia.luogo}</p>
@@ -115,8 +115,8 @@ export default function NecrologioDetailPage() {
             {/* Camera ardente */}
             <div className="bg-[#f7f7f7] border border-[#f0f0f0] rounded-xl p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-5 h-5 text-[#68CCD1]" />
-                <h3 className="font-semibold text-[#68CCD1] text-sm uppercase tracking-wide">Camera Ardente</h3>
+                <Clock className="w-5 h-5 text-[#B8A394]" />
+                <h3 className="font-semibold text-[#B8A394] text-sm uppercase tracking-wide">Camera Ardente</h3>
               </div>
               <p className="text-text font-medium">{necrologio.cameraArdente.luogo}</p>
               <p className="text-text-muted text-sm mt-1">{necrologio.cameraArdente.indirizzo}</p>
@@ -141,7 +141,7 @@ export default function NecrologioDetailPage() {
           <div className="flex flex-wrap gap-3">
             <Link
               to={`/necrologi/${necrologio.comune.toLowerCase()}/${necrologio.slug}#messaggio`}
-              className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-4 py-2.5 rounded-md hover:bg-[#4FB8BD] transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 bg-[#B8A394] text-white px-4 py-2.5 rounded-md hover:bg-[#9C8575] transition-colors text-sm font-medium"
             >
               <Send className="w-4 h-4" />
               Invia un messaggio
@@ -168,16 +168,15 @@ export default function NecrologioDetailPage() {
         <section className="mb-8">
           <h2 className="font-['Antic_Didone'] text-2xl text-black mb-6 font-normal">Messaggi di cordoglio</h2>
 
-          {necrologio.pensieri.length > 0 ? (
+              {necrologio.pensieri.length > 0 ? (
             <div className="space-y-4 mb-8">
               {necrologio.pensieri.filter(p => !p.visibileFamiglia).map((pensiero, i) => (
-                <div key={i} className="border-l-2 border-[#68CCD1] pl-4 py-3 bg-[#f7f7f7] rounded-r-lg">
+                <div key={i} className="border-l-2 border-[#B8A394] pl-4 py-3 bg-[#f7f7f7] rounded-r-lg">
                   <p className="text-[#666] italic">"{pensiero.testo}"</p>
                   <p className="text-xs text-[#888] mt-2">— {pensiero.autore}, {getRelativeTime(pensiero.data)}</p>
                 </div>
               ))}
-            </div>
-          ) : (
+            </div>          ) : (
             <p className="text-[#666] text-sm mb-8">Nessun messaggio di cordoglio ancora. Sii il primo a lasciare un pensiero.</p>
           )}
 
@@ -272,7 +271,7 @@ export default function NecrologioDetailPage() {
 
               <button
                 type="submit"
-                className="bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm"
+                className="bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm"
               >
                 Invia messaggio
               </button>
@@ -313,7 +312,7 @@ export default function NecrologioDetailPage() {
         {/* Pratica */}
         <div className="mt-8 pt-6 border-t border-[#e0e0e0] text-center">
           <p className="text-sm text-[#999]">
-            Pratica curata da <strong>Onoranze Funebri Pecorari</strong> · <a href="tel:+39059260667" className="text-[#68CCD1] hover:text-[#4FB8BD]">059 260667</a>
+            Pratica curata da <strong>Onoranze Funebri Pecorari</strong> · <a href="tel:+39059260667" className="text-[#B8A394] hover:text-[#9C8575]">059 260667</a>
           </p>
         </div>
       </div>

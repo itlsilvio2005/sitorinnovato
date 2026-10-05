@@ -111,7 +111,7 @@ export default function ServizioPage() {
           <h2 className="font-['Antic_Didone'] text-xl text-black mb-3 font-normal">Chiamaci per informazioni</h2>
           <p className="text-[#666] text-sm mb-4">Siamo a disposizione 24 ore su 24</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#68CCD1] text-white px-5 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm">
+            <a href="tel:+39059260667" className="inline-flex items-center gap-2 bg-[#B8A394] text-white px-5 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm">
               <Phone className="w-4 h-4" />
               Modena — 059 260667
             </a>

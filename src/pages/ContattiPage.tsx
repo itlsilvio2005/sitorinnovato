@@ -111,7 +111,7 @@ export default function ContattiPage() {
 
               <button
                 type="submit"
-                className="bg-[#68CCD1] text-white px-6 py-3 rounded-md hover:bg-[#4FB8BD] transition-colors font-medium text-sm"
+                className="bg-[#B8A394] text-white px-6 py-3 rounded-md hover:bg-[#9C8575] transition-colors font-medium text-sm"
               >
                 Invia messaggio
               </button>
