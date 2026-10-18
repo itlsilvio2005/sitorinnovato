@@ -34,14 +34,14 @@ export default function Home() {
         
         {/* Logo loto come sfondo */}
         <div 
-          className="absolute inset-0 flex items-center justify-center opacity-20"
+          className="absolute inset-0 flex items-center justify-center opacity-30 md:opacity-35 mix-blend-soft-light"
           style={{
             backgroundImage: 'url(/loto.png)',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            maskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 70%)'
+            backgroundPosition: 'center 40%',
+            maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)'
           }}
         ></div>
         

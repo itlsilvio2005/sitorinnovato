@@ -113,7 +113,7 @@ Il data layer è astratto in `src/lib/necrologi.ts`. Per collegare un database r
 - **Modena:** Via Nonantolana, 555 — 41122 — Tel. 059 260667
 - **Nonantola:** Piazza Liberazione, 34 — 41015 — Tel. 059 549279
 - **Cellulare/WhatsApp:** 338 7277095
-- **Email:** pecorarisrl@yahoo.it
+- **Email:** onoranzefunebripecorari@gmail.com
 - **P.IVA:** 02755090368
 
 ## 🖼️ Crediti immagini
