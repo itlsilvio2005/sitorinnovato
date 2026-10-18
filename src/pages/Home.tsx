@@ -28,27 +28,26 @@ export default function Home() {
   return (
     <main>
       {/* Hero con immagine di sfondo */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background con gradiente tortora */}
-        <div className="absolute inset-0 bg-gradient-to-br from-tortora-700 via-tortora-600 to-tortora-800"></div>
-        
-        {/* Logo loto come sfondo */}
+      <section 
+        className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/loto.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 60%',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay uniforme */}
         <div 
-          className="absolute inset-0 flex items-center justify-center opacity-30 mix-blend-soft-light"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/loto.jpeg)',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center 40%',
-            maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)',
+            backgroundColor: 'rgba(40, 32, 26, 0.35)',
             zIndex: 1
           }}
         ></div>
         
-        <div className="absolute inset-0 bg-black/30"></div>
-        
-        <div className="relative max-w-container mx-auto px-4 text-center text-white z-10">
+        {/* Contenuto */}
+        <div className="relative max-w-container mx-auto px-4 text-center text-white" style={{ zIndex: 2 }}>
           <div className="fade-in">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
               Organizzazione del rito funebre<br />con professionalità e serietà

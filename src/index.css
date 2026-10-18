@@ -73,3 +73,10 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Hero responsive background position */
+@media (min-width: 768px) {
+  section[style*="loto.jpeg"] {
+    background-position: center 70% !important;
+  }
+}
