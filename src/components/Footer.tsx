@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sede Modena */}
           <div>
-            <h3 className="font-serif text-lg mb-3 text-white">SEDE LEGALE MODENA</h3>
+            <h3 className="font-serif text-lg mb-3 text-white">SEDE MODENA</h3>
             <div className="space-y-2 text-sm text-white/90">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-tortora-300" />
