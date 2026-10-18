@@ -181,8 +181,8 @@ export default function ContattiPage() {
               <p className="text-text-secondary text-[15px]">
                 Potete contattarci anche via email:
               </p>
-              <a href="mailto:pecorarisrl@yahoo.it" className="text-tortora-800 font-semibold hover:text-tortora-900 transition-colors text-lg">
-                pecorarisrl@yahoo.it
+              <a href="mailto:onoranzefunebripecorari@gmail.com" className="text-tortora-800 font-semibold hover:text-tortora-900 transition-colors text-lg">
+                onoranzefunebripecorari@gmail.com
               </a>
             </div>
           </div>

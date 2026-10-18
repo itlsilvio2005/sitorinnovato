@@ -61,7 +61,7 @@ export default function Footer() {
               <a href="https://facebook.com/pecorarisrl" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Facebook">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </a>
-              <a href="mailto:pecorarisrl@yahoo.it" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Email">
+              <a href="mailto:onoranzefunebripecorari@gmail.com" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Email">
                 <Mail className="w-4 h-4 text-white" />
               </a>
               <a href="https://wa.me/+39%20338%207277095" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="WhatsApp">
@@ -69,7 +69,10 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm text-white/80 mb-2">
-              <a href="mailto:pecorarisrl@yahoo.it" className="hover:text-white transition-colors">pecorarisrl@yahoo.it</a>
+              <a href="mailto:onoranzefunebripecorari@gmail.com" className="hover:text-white transition-colors">onoranzefunebripecorari@gmail.com</a>
+            </p>
+            <p className="text-sm text-white/80 mb-2">
+              PEC: <a href="mailto:pecorarisrl@legalmail.it" className="hover:text-white transition-colors">pecorarisrl@legalmail.it</a>
             </p>
             <nav className="space-y-1 text-sm text-white/80">
               <Link to="/" className="block hover:text-white transition-colors">Home</Link>

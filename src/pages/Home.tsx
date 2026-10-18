@@ -31,6 +31,20 @@ export default function Home() {
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
         {/* Background con gradiente tortora */}
         <div className="absolute inset-0 bg-gradient-to-br from-tortora-700 via-tortora-600 to-tortora-800"></div>
+        
+        {/* Logo loto come sfondo */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center opacity-20"
+          style={{
+            backgroundImage: 'url(/loto.png)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            maskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 70%)'
+          }}
+        ></div>
+        
         <div className="absolute inset-0 bg-black/30"></div>
         
         <div className="relative max-w-container mx-auto px-4 text-center text-white z-10">
@@ -171,7 +185,7 @@ export default function Home() {
               <div className="space-y-4 text-text-primary text-[17px] leading-relaxed">
                 <p><strong>L'agenzia funebre Pecorari è sempre a vostra disposizione, tutti i giorni a qualsiasi ora.</strong></p>
                 <p>Potete contattarci tramite e-mail scrivendoci al nostro indirizzo</p>
-                <p><strong>pecorarisrl@yahoo.it</strong></p>
+                <p><strong>onoranzefunebripecorari@gmail.com</strong></p>
                 <p>Oppure potete compilare il modulo nella pagina contatti (quelli con l'asterisco sono OBBLIGATORI).</p>
                 <p>Vi verrà risposto al più presto all'indirizzo da voi inserito nel campo e-Mail.</p>
                 <p>In alternativa chiamate ai numeri riportati o contattaci su WhatsApp.</p>
