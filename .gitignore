@@ -3,3 +3,11 @@ node_modules/
 dist/
 build/
 *.log
+
+# Segreti e configurazioni locali: non committare mai
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vercel/
