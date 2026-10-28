@@ -191,7 +191,7 @@ export default function NecrologioDetailPage() {
               WhatsApp
             </a>
             <a
-              href={`mailto:?subject=Ricordo di ${necrologio.nome}&body=${encodeURIComponent(window.location.href)}`}
+              href={`mailto:?subject=${encodeURIComponent(`Ricordo di ${necrologio.nome}`)}&body=${encodeURIComponent(window.location.href)}`}
               className="inline-flex items-center gap-2 bg-white border border-tortora-200 text-text-primary px-4 py-2 rounded-md hover:bg-tortora-50 transition-colors text-[15px]"
             >
               <Mail className="w-4 h-4" />

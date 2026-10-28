@@ -183,6 +183,7 @@ export default function Chatbot() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              maxLength={300}
               placeholder="Scrivi un messaggio..."
               className="flex-1 px-4 py-2 border border-tortora-200 rounded-full text-sm focus:outline-none focus:border-tortora-500"
               disabled={isTyping}

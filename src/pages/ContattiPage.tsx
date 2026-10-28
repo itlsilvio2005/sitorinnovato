@@ -7,7 +7,6 @@ export default function ContattiPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form contatti (demo):', formData);
     setInviato(true);
     setFormData({ nome: '', cognome: '', email: '', telefono: '', messaggio: '', privacy: false });
   };
